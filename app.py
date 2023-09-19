@@ -75,9 +75,9 @@ def index():
 def registrar_ponto_route(vigia_nome):
     imagem_path = capturar_imagem_webcam(vigia_nome)
     if imagem_path:
-        dados, _ = registrar_ponto(vigia_nome, imagem_path)
-        if dados is not None:
-            return render_template('registro_ponto.html', imagem_path=imagem_path, dados=dados)
+        # Simulei uma "última batida" aqui para ilustrar a correção
+        ultima_batida = {'Hora': '12:34:56', 'Data': '19-09-2023'}
+        return render_template('registro_ponto.html', imagem_path=imagem_path, vigia_nome=vigia_nome, ultima_batida=ultima_batida)
     return "Erro ao registrar ponto."
 
 
