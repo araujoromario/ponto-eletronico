@@ -6,6 +6,6 @@
 <body>
     <h1>Batida de Ponto Registrada</h1>
     <p>Batida de ponto registrada para {{ dados['Vigia'] }} em {{ dados['Data'] }} às {{ dados['Hora'] }}.</p>
-    <img src="{{ url_for('static', filename='imagem.jpg') }}" alt="Imagem da Batida de Ponto">
+    <img src="{{ url_for('static', filename=imagem_path) }}" alt="Imagem da Batida de Ponto">
 </body>
 </html>

@@ -77,11 +77,9 @@ def registrar_ponto_route(vigia_nome):
     if imagem_path:
         dados, _ = registrar_ponto(vigia_nome, imagem_path)
         if dados is not None:
-            imagem = Image.open(imagem_path)
-            imagem = imagem.resize((300, 300), Image.ANTIALIAS)
-            imagem = ImageTk.PhotoImage(imagem)
-            return render_template('registro_ponto.html', imagem=imagem, dados=dados)
+            return render_template('registro_ponto.html', imagem_path=imagem_path, dados=dados)
     return "Erro ao registrar ponto."
+
 
 if __name__ == '__main__':
     app.run(debug=True)
