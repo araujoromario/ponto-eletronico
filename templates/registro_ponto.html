@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Batida de Ponto Registrada</title>
+</head>
+<body>
+    <h1>Batida de Ponto Registrada</h1>
+    <p>Batida de ponto registrada para {{ dados['Vigia'] }} em {{ dados['Data'] }} às {{ dados['Hora'] }}.</p>
+    <img src="{{ url_for('static', filename='imagem.jpg') }}" alt="Imagem da Batida de Ponto">
+</body>
+</html>
